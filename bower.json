@@ -1,0 +1,24 @@
+{
+  "name": "vue-ionic",
+  "description": "Ionic2 components implementation based on vue.",
+  "main": "dist/vue-ionic.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/vue-ionic",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
