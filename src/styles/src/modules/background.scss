@@ -1,0 +1,8 @@
+/**background Start**/
+
+@each $key,$value in $color-map{
+  .bg-#{$key}{
+    background-color:$value;
+  }
+}
+/**background  End**/
