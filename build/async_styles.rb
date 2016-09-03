@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby -wU
 require 'git'
+require 'rugged'
 require 'fileutils'
 require './modules/base_paths'
 require './modules/env_reset'
@@ -7,7 +8,7 @@ include BasePath;
 include EnvRest;
 
 ROOT_PATH = BasePath.get_root_path(Dir.pwd);
-IONIC_GIT_REPOSTIRY='git@github.com:afeiship/ionic-sass-helper.git';
+GIT_REPOSTIRY='git@github.com:afeiship/ionic-sass-helper.git';
 EnvRest.clean(ROOT_PATH);
 
 tmp = File.join(ROOT_PATH, '.tmp');
@@ -15,8 +16,8 @@ tmp_src = File.join(ROOT_PATH, '.tmp','src');
 project_src =File.join(ROOT_PATH, 'src', 'styles');
 
 #clone:
-Git.clone IONIC_GIT_REPOSTIRY, File.join(ROOT_PATH ,'.tmp'),verbose:true;
-puts "clone complete, to next!";
+g = Git.clone GIT_REPOSTIRY, tmp;
+g.log.each {|l| puts l.sha };
 
 
 #list scss:
