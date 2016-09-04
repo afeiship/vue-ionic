@@ -8,3 +8,8 @@ Ionic2 components implementation based on vue.
 
 ##todo:
 - [ ] Async ionic styles (use ruby).
+  + async ionic styles:
+  ```bash
+  cd build
+  ./async_styles.rb
+  ```
