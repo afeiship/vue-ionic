@@ -7,6 +7,9 @@
     "name": "afei",
     "email": "1290657123@qq.com"
   },
+  "scripts":{
+    "async-styles":"cd build && ./async-styles.rb"
+  },
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",
