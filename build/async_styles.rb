@@ -11,8 +11,10 @@ ROOT_PATH = BasePath.get_root_path(Dir.pwd);
 GIT_REPOSTIRY='git@github.com:afeiship/ionic-sass-helper.git';
 EnvRest.clean(ROOT_PATH);
 
-puts Rugged::Repository.discover();
-# 
+g= Rugged::Repository.discover();
+puts g.path;
+# puts Dir.basename g.path;
+#
 # tmp = File.join(ROOT_PATH, '.tmp');
 # tmp_src = File.join(ROOT_PATH, '.tmp','src');
 # project_src =File.join(ROOT_PATH, 'src', 'styles');
