@@ -7,9 +7,11 @@ Ionic2 components implementation based on vue.
 + http://www.runoob.com/ruby/ruby-array.html
 
 ##todo:
-- [ ] Async ionic styles (use ruby).
+- [x] Async ionic styles (use ruby).
   + async ionic styles:
   ```bash
   cd build
   ./async_styles.rb
   ```
+- [ ] Basic components show structure.
+- [ ] Optimize webpack scripts.
