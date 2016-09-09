@@ -13,5 +13,5 @@ Ionic2 components implementation based on vue.
   cd build
   ./async_styles.rb
   ```
-- [ ] Basic components show structure.
+- [x] Basic components show structure.
 - [ ] Optimize webpack scripts.
