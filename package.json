@@ -10,7 +10,7 @@
   "scripts": {
     "async-styles": "cd build && ./async-styles.rb",
     "clean": "rimraf dist/* static",
-    "dev": "npm run clean && webpack-dev-server --progress --colors --config webpack.config.dev.js"
+    "dev": "npm run clean && cd src && webpack-dev-server --progress --colors --config webpack.config.dev.js"
   },
   "dependencies": {
     "vue": "^1.0.10",

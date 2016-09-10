@@ -12,12 +12,12 @@
     entry: [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
-      './src/main'
+      './main'
     ],
     output: {
-      path: path.join(__dirname, './static'),
+      path: path.join(__dirname, '..','dist'),
       filename: 'scripts/main.js',
-      publicPath: 'http://localhost:8080/static/'
+      publicPath: '/'
     },
     module: {
       loaders: [
@@ -64,14 +64,15 @@
       new webpack.ProvidePlugin({
         Vue: 'vue'
       }),
-      new ExtractTextPlugin('styles/main.css')
+      new ExtractTextPlugin('styles/main.css'),
+      new HtmlWebpackPlugin()
     ],
     resolve: {
       extensions: ['', '.js', '.vue'],
       alias: {
-        views: path.join(__dirname, './src/views'),
-        components: path.join(__dirname, './src/components'),
-        styles: path.join(__dirname, './src/styles')
+        views: path.join(__dirname, './views'),
+        components: path.join(__dirname, './components'),
+        styles: path.join(__dirname, './styles')
       }
     },
     devtool: '#source-map'
