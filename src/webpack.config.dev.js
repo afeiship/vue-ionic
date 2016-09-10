@@ -65,7 +65,9 @@
         Vue: 'vue'
       }),
       new ExtractTextPlugin('styles/main.css'),
-      new HtmlWebpackPlugin()
+      new HtmlWebpackPlugin({
+        template:path.join(__dirname, 'index.html')
+      })
     ],
     resolve: {
       extensions: ['', '.js', '.vue'],
