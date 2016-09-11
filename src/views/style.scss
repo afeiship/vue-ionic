@@ -1,18 +1,24 @@
 @import "../config/index.scss";
 @import "../styles/src/ionic.ios.scss";
-body{
+
+body {
   position: static;
   overflow: auto;
+  user-select: auto;
+  user-drag: auto;
 }
+
 .api-container {
-    padding: 10px;
-    pre[class*="language-"]{
-      padding:0 1em;
-    }
-    .clip-button{
-      width:20px;
-      height:20px;
-      background: url(../assets/images/clippy.svg) no-repeat;
-      background-size: cover;
-    }
+  padding: 10px;
+
+  pre[class*="language-"] {
+    padding: 0 1em;
+  }
+
+  .clip-button {
+    width: 20px;
+    height: 20px;
+    background: url("../assets/images/clippy.svg") no-repeat;
+    background-size: cover;
+  }
 }

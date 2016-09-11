@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="api-item">
     <header class="hd">
-      <strong>props:</strong> <slot name="hd"></slot>
+      <strong>Properties:</strong> <slot name="hd"></slot>
       <div class="sub-title"><slot name="sub-title"></slot></div>
     </header>
     <div class="bd">
@@ -34,10 +34,10 @@ export default {
     > .hd {
         margin-bottom: 10px;
         font-size: 14px;
-        border-left: 5px solid #327eff;
+        border-left: 5px solid #42b983;
         background: #f5f5f5;
-        line-height: 30px;
-        padding-left: 10px;
+        line-height: 18px;
+        padding:8px 10px;
 
         .sub-title {
             font-size: 12px;
@@ -45,6 +45,8 @@ export default {
             font-weight: bold;
         }
     }
-    > .bd {}
+    > .bd {
+      padding:10px 0;
+    }
 }
 </style>
