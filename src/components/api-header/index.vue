@@ -1,10 +1,12 @@
 <template lang="html">
   <section class="api-header">
-    <h2 class="hd"> Class - <span class="name"><slot></slot></span></h2>
+    <h2 class="hd"><span class="name"><slot></slot></span></h2>
   </section>
 </template>
-
-
+<script>
+export default {
+};
+</script>
 <style lang="sass">
 .api-header {
   >.hd{

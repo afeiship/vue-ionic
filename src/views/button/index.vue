@@ -15,46 +15,45 @@
             <vi-button v-if="item.key == 'color'" :color="val">{{val}}</vi-button>
         </span>
       </section>
-<section slot="code-preview">
-{{item.codePreview}}
-</section>
-<!-- Trigger -->
+      <section slot="code-preview">{{item.codePreview}}</section>
     </api-item>
   </div>
 </template>
 
 <script>
 import ViButton from 'widgets/button';
-import ApiItem from 'components/api-item/index';
-import ApiHeader from 'components/api-header/index';
+import {
+  ApiItem,
+  ApiHeader
+} from 'components/index';
 export default {
   data() {
       return {
-        name:'ViButton',
+        name: 'ViButton',
         properties: [{
           key: 'type',
           value: ['button', 'submit'],
-          codePreview:require('./snippets/type.html')
+          codePreview: require('./snippets/type.html')
         }, {
           key: 'size',
           value: ['large', 'small', 'default'],
-          codePreview:require('./snippets/size.html')
+          codePreview: require('./snippets/size.html')
         }, {
           key: 'style',
           value: ['outline', 'clear', 'solid'],
-          codePreview:require('./snippets/style.html')
+          codePreview: require('./snippets/style.html')
         }, {
           key: 'shape',
           value: ['normal', 'round', 'fab'],
-          codePreview:require('./snippets/shape.html')
+          codePreview: require('./snippets/shape.html')
         }, {
           key: 'display',
           value: ['normal', 'full', 'block'],
-          codePreview:require('./snippets/display.html')
+          codePreview: require('./snippets/display.html')
         }, {
           key: 'color',
           value: ['default', 'light', 'danger', 'secondary', 'dark'],
-          codePreview:require('./snippets/color.html')
+          codePreview: require('./snippets/color.html')
         }]
       };
     },
