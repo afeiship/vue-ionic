@@ -1,2 +1,6 @@
 @import "../config/index.scss";
 @import "../styles/src/ionic.ios.scss";
+body{
+  position: static;
+  overflow: auto;
+}

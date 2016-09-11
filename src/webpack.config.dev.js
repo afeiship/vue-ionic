@@ -73,6 +73,7 @@
       extensions: ['', '.js', '.vue'],
       alias: {
         views: path.join(__dirname, './views'),
+        widgets: path.join(__dirname, './widgets'),
         components: path.join(__dirname, './components'),
         styles: path.join(__dirname, './styles')
       }

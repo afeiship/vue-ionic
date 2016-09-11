@@ -2,12 +2,14 @@
 
 import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
+import VueTouch from 'vue-touch';
 
 import app from './views/app.vue';
 import routerMap from './route.config';
 
-Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueRouter);
+Vue.use(VueTouch);
 Vue.config.debug = true;
 
 

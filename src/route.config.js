@@ -3,11 +3,8 @@ export default function(router) {
     '/': {
       component: require('./views/index/index.vue')
     },
-    '/sign': {
-      component: require('./views/sign/index.vue')
-    },
-    '/components': {
-      component: require('./views/components/index.vue')
+    '/button': {
+      component: require('./views/button/index.vue')
     },
     '*': {
       component: require('./views/404/index.vue')

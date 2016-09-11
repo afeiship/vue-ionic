@@ -15,7 +15,8 @@
   "dependencies": {
     "vue": "^1.0.10",
     "vue-resource": "^0.9.3",
-    "vue-router": "^0.7.13"
+    "vue-router": "^0.7.13",
+    "vue-touch": "^1.1.0"
   },
   "license": "MIT",
   "devDependencies": {

@@ -1,5 +1,5 @@
 <template lang="html">
-  Index VUe
+  I am index vue view!
 </template>
 
 <script>
