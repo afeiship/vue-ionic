@@ -6,6 +6,9 @@ Ionic2 components implementation based on vue.
 + http://www.runoob.com/ruby/ruby-array.html
 + http://www.cnblogs.com/haogj/p/5160821.html
 + https://clipboardjs.com/
++ http://ionicons.com/
++ http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/
+
 
 ## development:
 + run cmd:

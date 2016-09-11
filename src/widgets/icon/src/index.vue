@@ -1,18 +1,11 @@
 <template lang="html">
-  <i></i>
+  <i class="ion ion-{{name}}"></i>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-    };
-  },
-  computed: {},
-  ready() {},
-  attached() {},
-  methods: {},
-  components: {}
+  name:'ViIcon',
+  props:['name']
 };
 </script>
 

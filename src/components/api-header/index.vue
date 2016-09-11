@@ -3,10 +3,6 @@
     <h2 class="hd"><span class="name"><slot></slot></span></h2>
   </section>
 </template>
-<script>
-export default {
-};
-</script>
 <style lang="sass">
 .api-header {
   >.hd{
@@ -17,3 +13,4 @@ export default {
   }
 }
 </style>
+x
