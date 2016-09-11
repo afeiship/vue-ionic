@@ -2,7 +2,7 @@
   <router-view></router-view>
 </template>
 <style lang="sass">
-  @import "style.scss";
+  @import "style.scss"
 </style>
 <script>
   export default {

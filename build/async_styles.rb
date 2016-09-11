@@ -36,7 +36,7 @@ Rugged::Repository.clone_at(GIT_REPOSTIRY, tmp, {
 #list scss:
 FileUtils.cd(tmp) do
   Dir.glob('**/{.*,*.*}').reject{ |f| f.include? '.scss' }.each do |item|
-    FileUtils.rm_rf(item);
+    # FileUtils.rm_rf(item);
   end
 
   FileUtils.cp_r tmp_src, project_src;

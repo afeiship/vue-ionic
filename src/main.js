@@ -4,7 +4,7 @@ import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
 
 import app from './views/app.vue';
-import routerMap from './routers';
+import routerMap from './route.config';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
