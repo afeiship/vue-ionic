@@ -7,6 +7,10 @@ import VueTouch from 'vue-touch';
 import app from './views/app.vue';
 import routerMap from './route.config';
 
+//code preview:
+import Prismjs from 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
+
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VueTouch);

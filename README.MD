@@ -5,6 +5,7 @@ Ionic2 components implementation based on vue.
 + http://ionicframework.com/docs/v2/components/#action-sheets
 + http://www.runoob.com/ruby/ruby-array.html
 + http://www.cnblogs.com/haogj/p/5160821.html
++ https://clipboardjs.com/
 
 ## development:
 + run cmd:

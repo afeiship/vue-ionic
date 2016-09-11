@@ -4,3 +4,15 @@ body{
   position: static;
   overflow: auto;
 }
+.api-container {
+    padding: 10px;
+    pre[class*="language-"]{
+      padding:0 1em;
+    }
+    .clip-button{
+      width:20px;
+      height:20px;
+      background: url(../assets/images/clippy.svg) no-repeat;
+      background-size: cover;
+    }
+}

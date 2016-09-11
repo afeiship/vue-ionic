@@ -13,6 +13,7 @@
     "dev": "npm run clean && cd src && webpack-dev-server --progress --colors --config webpack.config.dev.js"
   },
   "dependencies": {
+    "prismjs": "^1.5.1",
     "vue": "^1.0.10",
     "vue-resource": "^0.9.3",
     "vue-router": "^0.7.13",
@@ -40,6 +41,8 @@
     "rimraf": "^2.5.3",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.12.3",
+    "svg-loader": "0.0.2",
+    "svg-url-loader": "^1.1.0",
     "url-loader": "^0.5.6",
     "vue-hot-reload-api": "^1.2.2",
     "vue-html-loader": "^1.2.0",

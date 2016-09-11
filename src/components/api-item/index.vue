@@ -7,13 +7,18 @@
     <div class="bd">
       <slot name="bd"></slot>
     </div>
+    <!-- DO NOT FORMAT THIS CODE  START-->
+    <pre><code class="lang-html"><slot name="code-preview"></slot></code></pre>
+    <!-- DO NOT FORMAT THIS CODE  END-->
   </section>
 </template>
 
 <script>
 export default {
   data() {
-      return {};
+      return {
+        // clipboardImg:require('assets/images/clippy.svg').default
+      };
     },
     computed: {},
     ready() {},
@@ -34,10 +39,10 @@ export default {
         line-height: 30px;
         padding-left: 10px;
 
-        .sub-title{
-          font-size:12px;
-          color:#999;
-          font-weight:bold;
+        .sub-title {
+            font-size: 12px;
+            color: #999;
+            font-weight: bold;
         }
     }
     > .bd {}

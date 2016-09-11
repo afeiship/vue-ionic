@@ -39,7 +39,7 @@
           test: /\.scss$/,
           loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!sass')
         },
-        {test: /\.(gif|jpg|png)\??.*$/, loader: 'url-loader?limit=8096&name=images/[name].[ext]'},
+        {test: /\.(gif|jpg|png|svg)\??.*$/, loader: 'url-loader?limit=8096&name=images/[name].[ext]'},
         {test: /\.(woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8096&name=fonts/[name].[ext]'},
         {test: /\.(html|tpl)$/, loader: 'html-loader'}
       ]
@@ -72,6 +72,7 @@
     resolve: {
       extensions: ['', '.js', '.vue'],
       alias: {
+        assets: path.join(__dirname, './assets'),
         views: path.join(__dirname, './views'),
         widgets: path.join(__dirname, './widgets'),
         components: path.join(__dirname, './components'),
