@@ -99,6 +99,9 @@ export default {
     },
     _mouseup: function(event) {
       this.activated = false;
+    },
+    _toButtonStyle:function (inValue) {
+      return inValue ? 'button-' + inValue : '';
     }
   }
 };
