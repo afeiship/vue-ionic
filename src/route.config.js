@@ -9,6 +9,9 @@ export default function(router) {
     '/icon': {
       component: require('./views/icon/index.vue')
     },
+    '/backdrop': {
+      component: require('./views/backdrop/index.vue')
+    },
     '/action-sheet': {
       component: require('./views/action-sheet/index.vue')
     },
