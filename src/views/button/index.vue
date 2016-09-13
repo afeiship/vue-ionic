@@ -52,7 +52,7 @@ export default {
           codePreview: require('./snippets/display.html')
         }, {
           key: 'color',
-          value: ['default', 'light', 'danger', 'secondary', 'dark'],
+          value: ['default', 'light', 'danger', 'secondary', 'dark','wechat'],
           codePreview: require('./snippets/color.html')
         }]
       };

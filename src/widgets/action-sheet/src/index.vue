@@ -35,7 +35,7 @@ export default {
     visible: {
       type: Boolean,
       default: false,
-      coerce:function (inValue) {
+      coerce: function(inValue) {
         console.log(this);
         return 'button-' + inValue;
       }
@@ -55,15 +55,19 @@ export default {
     cancelButton: {
       type: Object,
       default: null
+    },
+    enableBackdropDismiss: {
+      type: Boolean,
+      default: true
     }
   },
-  methods:{
-    _backdrop_click:function () {
-      this.visible=false;
+  methods: {
+    _backdrop_click: function() {
+      this.visible = false;
     }
   },
-  computed:{
-    _style:function () {
+  computed: {
+    _style: function() {
       console.log(this.visible);
       return this.visible ? 'translateY(0%)' : ''
     }
