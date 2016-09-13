@@ -7,7 +7,16 @@
         <a href="http://ionicons.com/">http://ionicons.com/</a>
       </template>
       <template slot="bd">
-        <section class="content" v-html="codePreview"></section>
+        <section class="content">
+          <ul>
+            <li><vi-icon name="ios-add"></vi-icon></li>
+            <li><vi-icon name="ios-female"></vi-icon></li>
+            <li><vi-icon name="ios-beer"></vi-icon></li>
+            <li><vi-icon name="ios-filing"></vi-icon></li>
+            <li><vi-icon name="md-man"></vi-icon></li>
+            <li><vi-icon name="md-medal"></vi-icon></li>
+          </ul>
+        </section>
       </template>
       <template slot="code-preview">{{codePreview}}</template>
     </api-item>

@@ -8,6 +8,3 @@ export default {
   props:['name']
 };
 </script>
-
-<style lang="sass">
-</style>
