@@ -8,12 +8,12 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "async-styles": "cd build && ./async-styles.rb",
+    "sync-ionc-styles": "cd build && ./sync-ionc-styles.rb",
     "clean": "rimraf dist/* static",
     "dev": "npm run clean && cd src && webpack-dev-server --progress --colors --config webpack.config.dev.js"
   },
   "dependencies": {
-    "ionicons": "^2.0.1",
+    "ionicons": "3.0.0",
     "prismjs": "^1.5.1",
     "vue": "^1.0.10",
     "vue-resource": "^0.9.3",

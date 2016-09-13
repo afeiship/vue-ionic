@@ -15,6 +15,9 @@ export default function(router) {
     '/action-sheet': {
       component: require('./views/action-sheet/index.vue')
     },
+    '/card': {
+      component: require('./views/card/index.vue')
+    },
     '*': {
       component: require('./views/404/index.vue')
     }

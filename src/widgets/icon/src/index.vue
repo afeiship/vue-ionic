@@ -1,5 +1,5 @@
 <template lang="html">
-  <i class="ion ion-{{name}}"></i>
+  <ion-icon class="ion ion-{{name}}"></ion-icon>
 </template>
 
 <script>

@@ -4,11 +4,14 @@ require 'rugged'
 require 'fileutils'
 require 'ruby-progressbar';
 require './modules/env_reset'
+require './modules/sync_fonts'
 include EnvRest
+include SyncFonts
 
 ROOT_PATH = File.dirname Rugged::Repository.discover.path
 GIT_REPOSTIRY = 'https://github.com/driftyco/ionic.git';
-EnvRest.clean(ROOT_PATH)
+EnvRest.clean(ROOT_PATH);
+
 
 progressbar = ProgressBar.create( :format => "%a %b %c/%C\u{15E7}%i %p%% %t",
                     :progress_mark  => '=',
@@ -41,3 +44,5 @@ FileUtils.cd(tmp) do
 
   FileUtils.cp_r tmp_src, project_src;
 end
+
+SyncFonts.copy_fonts(ROOT_PATH);

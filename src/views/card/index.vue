@@ -3,7 +3,6 @@
     <ion-card-header>
       Card Header
     </ion-card-header>
-
     <ion-card-content>
       <!-- Add card content here! -->
     </ion-card-content>
