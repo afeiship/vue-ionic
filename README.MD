@@ -1,13 +1,6 @@
 #vue-ionic
 Ionic2 components implementation based on vue.
 
-##resources:
-+ http://ionicframework.com/docs/v2/components/#action-sheets
-+ http://www.runoob.com/ruby/ruby-array.html
-+ http://www.cnblogs.com/haogj/p/5160821.html
-+ https://clipboardjs.com/
-+ http://ionicons.com/
-+ http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/
 
 ## widget list:
 - [x] button
@@ -33,3 +26,11 @@ npm run dev
   ```
 - [x] Basic components show structure.
 - [ ] Optimize webpack scripts.
+
+##resources:
++ http://ionicframework.com/docs/v2/components/#action-sheets
++ http://www.runoob.com/ruby/ruby-array.html
++ http://www.cnblogs.com/haogj/p/5160821.html
++ https://clipboardjs.com/
++ http://ionicons.com/
++ http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/
