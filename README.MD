@@ -9,6 +9,13 @@ Ionic2 components implementation based on vue.
 + http://ionicons.com/
 + http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/
 
+## widget list:
+- [x] button
+- [x] backdrop
+- [x] icon
+- [ ] action-sheet
+- [ ] card
+
 
 ## development:
 + run cmd:
