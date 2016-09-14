@@ -18,6 +18,15 @@ module SyncFonts
     FileUtils.cp_r Dir[File.join(ionioncs_fonts_dir, '*.*')], fonts_dir
   end
 
+
+  def copy_fonts_json(rootPath)
+    ionioncs_data_dir = File.join(rootPath, '/node_modules/ionicons/dist/data')
+    fonts_dir = File.join(rootPath, '/src/styles/src/fonts/')
+    FileUtils.cd(ionioncs_data_dir) do
+      FileUtils.cp_r %w(logo-icons.json mode-icons.json), fonts_dir
+    end
+  end
+
   def create_ionic_json(rootPath)
     ionioncs_scss_dir = File.join(rootPath, '/node_modules/ionicons/dist/scss')
     file_contents = File.read(File.join(ionioncs_scss_dir, 'ionicons-icons.scss'))

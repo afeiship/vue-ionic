@@ -9,13 +9,17 @@
       <template slot="code-preview">{{codePreview}}</template>
       <template slot="bd">
         <section class="content">
-          <ul>
-            <li v-for="item in icons" @click="_click(item)" track-by="$index"><vi-icon :name="item"></vi-icon></li>
+          <ul class="logo-icons">
+            <li v-for="(key,value) in logoIcons" @click="_click(key,'logo')" track-by="$index"><vi-icon :name="key | toIcon 'logo'"></vi-icon></li>
+          </ul>
+          <ul class="mode-ios-icons">
+            <li v-for="(key,value) in modeIcons" @click="_click(key,'ios')" track-by="$index"><vi-icon :name="key | toIcon 'ios'"></vi-icon></li>
+          </ul>
+          <ul class="mode-md-icons">
+            <li v-for="(key,value) in modeIcons" @click="_click(key,'md')" track-by="$index"><vi-icon :name="key | toIcon 'md'"></vi-icon></li>
           </ul>
         </section>
       </template>
-
-
     </api-item>
   </div>
 </template>
@@ -26,18 +30,23 @@ import {
   ApiItem,
   ApiHeader
 } from 'components/index';
+
+Vue.filter('toIcon',function (inValue,inType) {
+  return [inType,inValue].join('-');
+});
 export default {
   data() {
       return {
         name:'ViIcon',
         currentIcon:'ios-add',
-        icons:require('styles/src/fonts/icons.json'),
+        logoIcons:require('styles/src/fonts/logo-icons.json'),
+        modeIcons:require('styles/src/fonts/mode-icons.json'),
         codePreview:require('./snippets/icons.html')
       };
     },
     methods:{
-      _click:function (item) {
-        this.currentIcon=item;
+      _click:function (item,inType) {
+        this.currentIcon=this.$options.filters.toIcon(item,inType);
       }
     },
     components: {
@@ -58,6 +67,7 @@ ul {
   list-style: none;
   text-align: left;
   font-size: 1px;
+  margin-bottom: 30px;
 }
 li {
   position: relative;

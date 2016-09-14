@@ -46,4 +46,4 @@ FileUtils.cd(tmp) do
 end
 
 SyncFonts.copy_fonts(ROOT_PATH);
-SyncFonts.create_ionic_json(ROOT_PATH);
+SyncFonts.copy_fonts_json(ROOT_PATH);
