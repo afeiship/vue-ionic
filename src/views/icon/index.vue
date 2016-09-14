@@ -3,22 +3,19 @@
     <api-header>{{name}}</api-header>
     <api-item>
       <template slot="hd">
-        <vi-icon name="ionic"></vi-icon>
-        <a href="http://ionicons.com/">http://ionicons.com/</a>
+        Icon name(Click the icon)
       </template>
+      <template slot="sub-title">{{currentIcon}}</template>
+      <template slot="code-preview">{{codePreview}}</template>
       <template slot="bd">
         <section class="content">
           <ul>
-            <li><vi-icon name="ios-add"></vi-icon></li>
-            <li><vi-icon name="ios-female"></vi-icon></li>
-            <li><vi-icon name="ios-beer"></vi-icon></li>
-            <li><vi-icon name="ios-filing"></vi-icon></li>
-            <li><vi-icon name="md-man"></vi-icon></li>
-            <li><vi-icon name="md-medal"></vi-icon></li>
+            <li v-for="item in icons" @click="_click(item)" track-by="$index"><vi-icon :name="item"></vi-icon></li>
           </ul>
         </section>
       </template>
-      <template slot="code-preview">{{codePreview}}</template>
+
+
     </api-item>
   </div>
 </template>
@@ -33,8 +30,15 @@ export default {
   data() {
       return {
         name:'ViIcon',
+        currentIcon:'ios-add',
+        icons:require('styles/src/fonts/icons.json'),
         codePreview:require('./snippets/icons.html')
       };
+    },
+    methods:{
+      _click:function (item) {
+        this.currentIcon=item;
+      }
     },
     components: {
       ViIcon,
@@ -59,12 +63,12 @@ li {
   position: relative;
   z-index: 0;
   display: inline-block;
-  width: 42px;
+  width: 26px;
   border-radius: 4px;
   list-style: none;
   text-align: center;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 18px;
   cursor: pointer;
 }
 li:hover {

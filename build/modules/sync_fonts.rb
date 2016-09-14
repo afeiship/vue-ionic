@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby -wKU
+# https://www.ralfebert.de/snippets/ruby-rails/regex_cheat_sheet/
+
 require 'fileutils'
+require 'json'
 module SyncFonts
   def copy_fonts(rootPath)
     ionioncs_dir = File.join(rootPath, '/node_modules/ionicons/dist')
@@ -15,8 +18,14 @@ module SyncFonts
     FileUtils.cp_r Dir[File.join(ionioncs_fonts_dir, '*.*')], fonts_dir
   end
 
-  def create_ionic_json(rootPath) do
-    ionioncs_scss_dir = File.join(ionioncs_dir, '/node_modules/ionicons/dist/scss')
-    puts File.read(File.join(ionioncs_scss_dir,'ionicons-icons.scss'));
+  def create_ionic_json(rootPath)
+    ionioncs_scss_dir = File.join(rootPath, '/node_modules/ionicons/dist/scss')
+    file_contents = File.read(File.join(ionioncs_scss_dir, 'ionicons-icons.scss'))
+    fonts_dir = File.join(rootPath, '/src/styles/src/fonts/icons.json')
+    icons_hash =file_contents.scan(/\.ion-(.*?):(?:.*?)/i).map { |e| e[0]  };
+    File.open(fonts_dir,"w") do |f|
+      f.write(JSON.pretty_generate(icons_hash))
+    end
+    # puts file_contents.scan(/\.ion-(.*?):(?:.*?)/im)
   end
 end

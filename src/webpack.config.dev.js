@@ -42,7 +42,7 @@
         {test: /\.(gif|jpg|png|svg)\??.*$/, loader: 'url-loader?limit=8096&name=images/[name].[ext]'},
         {test: /\.(woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8096&name=fonts/[name].[ext]'},
         {test: /\.(html|tpl)$/, loader: 'html-loader'},
-        {test: /\.(jade)$/, loader: 'jade-loader'}
+        {test: /\.(json)$/, loader: 'json-loader'}
       ]
     },
     vue: {
