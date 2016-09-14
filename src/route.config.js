@@ -18,6 +18,9 @@ export default function(router) {
     '/card': {
       component: require('./views/card/index.vue')
     },
+    '/badge': {
+      component: require('./views/badge/index.vue')
+    },
     '*': {
       component: require('./views/404/index.vue')
     }
