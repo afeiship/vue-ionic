@@ -6,6 +6,7 @@ Ionic2 components implementation based on vue.
 - [x] button
 - [x] backdrop
 - [x] icon
+- [x] badge
 - [ ] action-sheet
 - [ ] card
 
