@@ -31,9 +31,7 @@ import {
   ApiHeader
 } from 'components/index';
 
-Vue.filter('toIcon',function (inValue,inType) {
-  return [inType,inValue].join('-');
-});
+
 export default {
   data() {
       return {
@@ -43,6 +41,11 @@ export default {
         modeIcons:require('styles/src/fonts/mode-icons.json'),
         codePreview:require('./snippets/icons.html')
       };
+    },
+    filters:{
+      toIcon:function (inValue,inType) {
+        return [inType,inValue].join('-');
+      }
     },
     methods:{
       _click:function (item,inType) {
