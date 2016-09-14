@@ -34,3 +34,4 @@ npm run dev
 + https://clipboardjs.com/
 + http://ionicons.com/
 + http://www.ahonn.me/2016/07/13/getting-highlightjs-to-work-with-vue.js/
++ https://coligo.io/vuejs-filters/
