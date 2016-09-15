@@ -3,7 +3,7 @@
     <api-header>{{name}}</api-header>
     <api-item>
       <template slot="hd">
-        Icon name(Click the icon)
+        name
       </template>
       <template slot="sub-title">{{currentIcon}}</template>
       <template slot="code-preview">{{codePreview}}</template>
@@ -12,15 +12,23 @@
           <ul class="logo-icons">
             <li v-for="(key,value) in logoIcons" @click="_click(key,'logo')" track-by="$index"><vi-icon :name="key | toIcon 'logo'" small></vi-icon></li>
           </ul>
-          <ul class="mode-ios-icons">
-            <li v-for="(key,value) in modeIcons" @click="_click(key,'ios')" track-by="$index"><vi-icon :name="key | toIcon 'ios'"></vi-icon></li>
-          </ul>
-          <ul class="mode-md-icons">
-            <li v-for="(key,value) in modeIcons" @click="_click(key,'md')" track-by="$index"><vi-icon :name="key | toIcon 'md'"></vi-icon></li>
-          </ul>
         </section>
       </template>
     </api-item>
+
+    <api-item>
+      <template slot="hd">
+        small
+      </template>
+      <template slot="sub-title">small:{{small}}</template>
+      <template slot="code-preview">{{smallPreview}}</template>
+      <template slot="bd">
+        <section class="content">
+          <div class="small-icon" @click="_small_click"><vi-icon name="ios-filing" :small="small"></vi-icon></div>
+        </section>
+      </template>
+    </api-item>
+
   </div>
 </template>
 
@@ -39,7 +47,9 @@ export default {
         currentIcon:'ios-add',
         logoIcons:require('styles/src/fonts/logo-icons.json'),
         modeIcons:require('styles/src/fonts/mode-icons.json'),
-        codePreview:require('./snippets/icons.html')
+        codePreview:require('./snippets/icons.html'),
+        smallPreview:require('./snippets/small.html'),
+        small:false
       };
     },
     filters:{
@@ -50,6 +60,9 @@ export default {
     methods:{
       _click:function (item,inType) {
         this.currentIcon=this.$options.filters.toIcon(item,inType);
+      },
+      _small_click:function () {
+        this.small=!this.small;
       }
     },
     components: {
@@ -90,4 +103,16 @@ li:hover {
 li.active {
   color: #4F8EF7;
 }
+
+.small-icon{
+  font-size:32px;
+  width:40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.small-icon ion-icon:active{
+  color: #4F8EF7;
+}
+
 </style>
