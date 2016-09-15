@@ -36,6 +36,11 @@ export default {
             key:'list in card',
             value:['ion-card','ion-list','ion-item'],
             codePreview:require('./snippets/list-in-card.html')
+          },
+          {
+            key:'background image',
+            value:['ion-card','ion-list','ion-item'],
+            codePreview:require('./snippets/background-image.html')
           }
         ]
       };
