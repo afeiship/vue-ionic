@@ -10,7 +10,7 @@
       <template slot="bd">
         <section class="content">
           <ul class="logo-icons">
-            <li v-for="(key,value) in logoIcons" @click="_click(key,'logo')" track-by="$index"><vi-icon :name="key | toIcon 'logo'"></vi-icon></li>
+            <li v-for="(key,value) in logoIcons" @click="_click(key,'logo')" track-by="$index"><vi-icon :name="key | toIcon 'logo'" small></vi-icon></li>
           </ul>
           <ul class="mode-ios-icons">
             <li v-for="(key,value) in modeIcons" @click="_click(key,'ios')" track-by="$index"><vi-icon :name="key | toIcon 'ios'"></vi-icon></li>
