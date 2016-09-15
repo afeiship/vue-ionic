@@ -21,6 +21,9 @@ export default function(router) {
     '/badge': {
       component: require('./views/badge/index.vue')
     },
+    '/grid': {
+      component: require('./views/grid/index.vue')
+    },
     '*': {
       component: require('./views/404/index.vue')
     }
