@@ -24,6 +24,9 @@ export default function(router) {
     '/grid': {
       component: require('./views/grid/index.vue')
     },
+    '/item': {
+      component: require('./views/item/index.vue')
+    },
     '*': {
       component: require('./views/404/index.vue')
     }
